@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* skip menu */
+.skip {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.skip:focus {
+  top: 0;
+}
+
+/* layout */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: black;
+}
+
+.innerHeader {
+  padding: 0 60px;
+  height: 90px;
+  transition: all 0.3s;
+}
+
+.innerHeader .logo {
+  width: 200px;
+  height: 36px;
+  float: left;
+  margin-top: 28px;
+  transition: all 0.3s;
+}
+
+.innerHeader .logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.innerHeader .logo a img {
+  width: 100%;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.innerHeader .logo a img:last-child {
+  opacity: 0;
+}
+
+/* GNB */
+.gnb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+}
+
+.gnb > li {
+  float: left;
+  width: 20%;
+  height: 90px;
+  line-height: 90px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.gnb > li > a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.gnb li > a::before {
+  position: absolute;
+  content: '';
+  background: #f8b922;
+  width: 70%;
+  height: 100%;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -90px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.gnb > li:hover > a:before,
+.gnb > li:focus::before {
+  opacity: 1;
+  top: 0;
+}
+
+.gnb ul.inner {
+  position: absolute;
+  top: 85px;
+  left: 15%;
+  width: 160px;
+  background: #fff;
+  box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  line-height: 0;
+  opacity: 0;
+  transition: opacity 0.5s, top 0.5s;
+  overflow: hidden;
+}
+
+.gnb .inner.on {
+  top: 90px;
+  padding: 10px 25px;
+  line-height: 50px;
+  opacity: 1;
+}
+
+.gnb ul.inner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+}
+
+.gnb ul.inner a span {
+  display: inline-block;
+  position: relative;
+}
+
+.gnb ul.inner a span::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #f8b922;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  transition: all 0.3s;
+}
+
+.gnb ul.inner a:hover span::after,
+.gnb ul.inner a:focus span::after {
+  width: 100%;
+  padding-right: 10px;
+}
