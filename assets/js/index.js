@@ -2,7 +2,7 @@
 const lenis = new Lenis();
 
 lenis.on('scroll', (e) => {
-  console.log(e);
+  // console.log(e);
 });
 
 function raf(time) {
@@ -25,7 +25,7 @@ $(function () {
 });
 
 // fixed header
-const scrollFix = 0;
+let scrollFix = 0;
 scrollFix = $(document).scrollTop();
 fixHeader();
 
@@ -34,3 +34,12 @@ $(window).on('scroll resize', function () {
   scrollFix = $(document).scrollTop();
   fixHeader();
 });
+
+// 고정헤더 함수 =>fixHeader
+function fixHeader() {
+  if (scrollFix > 150) {
+    $('header').addClass('on');
+  } else {
+    $('header').removeClass('on');
+  }
+}
