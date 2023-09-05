@@ -43,3 +43,22 @@ function fixHeader() {
     $('header').removeClass('on');
   }
 }
+
+//글자애니메이션  Splitting 데모사이트 그대로 작성 따라하기
+$(function () {
+  Splitting();
+});
+
+// .top-visual 이미지 슬라이드
+$(document).ready(function () {
+  $('.visual .slide').slick({
+    arrow: true, //화살표
+    dots: false, //인디케이터
+    autoplay: true, // 자동재생
+    fade: true, // 페이드인 효과
+    autoplaySpeed: 7000, // 재생시간
+    pauseOnHover: false, // 호버 시 멈추는 것을 해제
+    pauseOnFocus: false,
+  });
+  $('.slick-prev').text('prev');
+});

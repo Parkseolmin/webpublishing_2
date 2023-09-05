@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 /* skip menu */
 .skip {
   position: absolute;
@@ -23,7 +22,6 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 14px;
-  background: #eee;
 }
 
 .wrap {
@@ -31,14 +29,15 @@ body {
   overflow: hidden;
 }
 
+.en {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
 header {
   width: 100%;
   position: fixed;
   z-index: 100;
   background: black;
-}
-
-header.on {
 }
 
 .innerHeader {
@@ -67,6 +66,7 @@ header.on {
   position: absolute;
   top: -15px;
   left: 0;
+  transition: all 0.3s;
 }
 
 .innerHeader .logo a img:nth-child(2) {
@@ -97,6 +97,7 @@ header.on {
 .gnb > li > a {
   display: block;
   width: 100%;
+  height: 100%;
   text-align: center;
   color: #fff;
   font-size: 18px;
@@ -192,7 +193,7 @@ header.on .innerHeader .logo a img:nth-child(2) {
   opacity: 1;
 }
 
-header.on .innerHeader .gnb > li {
+header.on .gnb > li {
   height: 60px;
   line-height: 60px;
   transition: all 0.4s;
@@ -200,6 +201,171 @@ header.on .innerHeader .gnb > li {
 
 header.on .gnb ul.inner.on {
   top: 60px;
+}
+
+/* visual */
+.visual .slide li {
+  position: relative;
+  width: 100%;
+  height: 870px;
+  text-align: center;
+  color: #fff;
+}
+
+.visual .slide li:before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22%;
+  /* background: url(../img/symbol.png) no-repeat center/cover; */
+  z-index: 1;
+}
+
+.visual .slide li img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  top: 0;
+}
+
+.visual .slide li .txt {
+  position: absolute;
+  width: 100%;
+  top: 34%;
+  font-size: 135px;
+  line-height: 1;
+  letter-spacing: 12px;
+}
+
+.visual .slide li a {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 27%;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.visual .slide li a:after {
+  content: '';
+  width: 65%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  background: #f8b922;
+  transition: all 0.3s;
+}
+
+.visual .slide li a:hover:after,
+.visual .slide li a:focus:after {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+/*mask*/
+.visual .slide li .mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.visual .slide li .mask.a {
+  left: 0%;
+}
+
+.visual .slide li .mask.b {
+  left: 25%;
+}
+
+.visual .slide li .mask.c {
+  left: 50%;
+}
+
+.visual .slide li .mask.d {
+  left: 75%;
+}
+
+/*화살표*/
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: none;
+  width: 110px;
+  height: 52px;
+  border: none;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.slick-next {
+  right: 0;
+  text-align: left;
+}
+
+.slick-arrow:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55%;
+  height: 2px;
+  background: #fff;
+}
+
+.slick-next:after {
+  left: 45%;
+}
+
+.slick-arrow:before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.slick-prev:before {
+  left: 0;
+}
+
+.slick-next:before {
+  right: 0;
+}
+
+/* 화살표 호버효과*/
+.slick-arrow:hover {
+  color: #000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.slick-arrow:hover:after {
+  background: #f8b922;
+}
+
+.slick-arrow:hover:before {
+  width: 112%;
 }
 
 /* 테블릿(1024px ~ 1400px */
