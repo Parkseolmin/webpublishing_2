@@ -19,6 +19,7 @@
   </head>
   <body>
     <div class="wrap">
+      <!-- 웹 사용성 skip-->
       <a href="#contents" class="skip">본문바로가기</a>
 
       <!-- <div class="menuOpen"> -->
@@ -31,12 +32,15 @@
       <!-- header -->
       <header>
         <div class="innerHeader">
+          <!-- logo -->
           <h1 class="logo">
             <a href="#">
               <img src="assets/img/logoImg.png" alt="로고" />
               <img src="assets/img/logo2.png" alt="로고" />
             </a>
           </h1>
+
+          <!-- gnb -->
           <ul class="gnb">
             <li>
               <a href="#">회사소개</a>
@@ -155,60 +159,68 @@
             <span class="mask d"></span>
           </li>
         </ul>
+        <!-- //slide -->
       </section>
+
       <!-- contents -->
       <section class="contents">
+        <!-- background line -->
         <span class="line a"></span>
         <span class="line b"></span>
         <span class="line c"></span>
+
+        <!-- information -->
         <div class="information">
-          <div class="container">
-            <div class="scrollBox" id="scroll">
-              <a href="#" class="scroll en">
-                SCROLL DOWN
-                <span><img src="assets/img/scrolldown.png" alt="" /></span>
-              </a>
+          <!-- scrollBox -->
+          <div class="scrollBox" id="scroll">
+            <a href="#" class="scroll en">
+              SCROLL DOWN
+              <span><img src="assets/img/scrolldown.png" alt="" /></span>
+            </a>
+          </div>
+
+          <!-- inner -->
+          <div class="inner animate" data-animate="motion">
+            <div class="title">
+              <div data-splitting class="en">SALES</div>
+              <div data-splitting class="en">INFORMATION</div>
+              <p>고객의 행복한 미래가 대방산업개발의 미래입니다.</p>
             </div>
-            <div class="inner animate" data-animate="motion">
-              <div class="title">
-                <div data-splitting class="en">SALES</div>
-                <div data-splitting class="en">INFORMATION</div>
-                <p>고객의 행복한 미래가 대방산업개발의 미래입니다.</p>
-              </div>
-            </div>
-            <div class="slideBox">
-              <ul class="slide2">
-                <li>
-                  <a href="#">
-                    <p class="img">
-                      <span><img src="assets/img/slide1.jpg" alt="" /></span>
-                    </p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p class="img">
-                      <span><img src="assets/img/slide2.jpg" alt="" /></span>
-                    </p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p class="img">
-                      <span><img src="assets/img/slide3.jpg" alt="" /></span>
-                    </p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p class="img">
-                      <span><img src="assets/img/slide4.jpg" alt="" /></span>
-                    </p>
-                  </a>
-                </li>
-              </ul>
-              <a href="#" class="more en">FIND OUT MORE</a>
-            </div>
+          </div>
+
+          <!-- slideBox -->
+          <div class="slideBox">
+            <ul class="slide2">
+              <li>
+                <a href="#">
+                  <p class="img">
+                    <span><img src="assets/img/slide1.jpg" alt="" /></span>
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img">
+                    <span><img src="assets/img/slide2.jpg" alt="" /></span>
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img">
+                    <span><img src="assets/img/slide3.jpg" alt="" /></span>
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img">
+                    <span><img src="assets/img/slide4.jpg" alt="" /></span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="more en">FIND OUT MORE</a>
           </div>
         </div>
 
@@ -222,8 +234,8 @@
             <a href="#" class="more en">FIND OUT MORE</a>
             <div class="videoBox">
               <iframe
-                width="690"
-                height="391"
+                width="100%"
+                height="100%"
                 src="https://www.youtube.com/embed/xgO8wm-9fv0"
                 title="안국약품 토탈비타민 토비콤골드 TVC 15s (남궁민)"
                 frameborder="0"
@@ -278,6 +290,72 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <!-- news -->
+        <div class="news">
+          <!-- inner -->
+          <div class="inner animate" data-animate="motion">
+            <div class="title">
+              <div data-splitting class="en">NEWS</div>
+            </div>
+            <a href="#" class="more en">FIND OUT MORE</a>
+          </div>
+          <!-- simbol -->
+          <p class="symbol animate" data-animate="motion">
+            <img src="assets/img/news2.png" alt="" />
+          </p>
+          <ul class="newsList">
+            <!-- 1 -->
+            <li>
+              <a href="#">
+                <span class="category">공지 <br />사항</span>
+                <span class="category__txt">
+                  <span class="subject">새해 복 많이 받으세요!</span>
+                  <span class="date en">2023.09.07</span>
+                  <span class="desc"></span>
+                </span>
+              </a>
+            </li>
+            <!-- 2 -->
+            <li>
+              <a href="#">
+                <span class="category">대산 <br />소식</span>
+                <span class="category__txt">
+                  <span class="subject">마곡 신사옥에서 2023년 첫 시무식</span>
+                  <span class="date en">2023.09.07</span>
+                  <span class="desc">
+                    마곡 신사옥에서 2020년 첫 시무식 당사는 서울 강서구 마곡
+                    신사옥에서 2일 오전 11시 시무식을 열고 2020년을
+                    맞았습니다!이날 시무식에는 본사 임직원들이 8층 대회의실에서
+                    새로운 한해를 시작...
+                  </span>
+                </span>
+              </a>
+            </li>
+            <!-- 3 -->
+            <li>
+              <a href="#">
+                <span class="category">대산 <br />소식</span>
+                <span class="category__txt">
+                  <span class="subject">대방산업개발 CF</span>
+                  <span class="date en">2023.09.07</span>
+                  <span class="desc">대방산업개발 CF</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- career -->
+        <div class="career animate" data-animate="motion">
+          <div class="inner animate" data-animate="motion">
+            <div class="title">
+              <div data-splitting class="en">CAREER</div>
+              <p>열정과 실천의지를 가지고 있는<br />인재를 기다립니다.</p>
+            </div>
+            <a href="#" class="more en">FIND OUT MORE</a>
+          </div>
         </div>
       </section>
     </div>
