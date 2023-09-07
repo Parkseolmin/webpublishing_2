@@ -22,7 +22,6 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 14px;
-  background: #eee;
 }
 
 .container {
@@ -525,7 +524,6 @@ header.on .gnb ul.inner.on {
 .contents {
   position: relative;
   background: #fff;
-  height: 500px;
   margin-bottom: 5000px;
 }
 
@@ -1025,8 +1023,203 @@ header.on .gnb ul.inner.on {
   height: 100%;
 }
 
+/* business */
+.contents .business {
+  position: relative;
+}
+
+.contents .business .inner {
+  position: absolute;
+  width: 476px;
+  top: 0;
+  left: 25%;
+  padding: 150px 0 100px;
+}
+
+.contents .business .inner::after {
+  top: 0;
+  left: 0;
+}
+
+.contents .business .list {
+  width: 1520px;
+  height: 1250px;
+  margin: auto;
+  position: relative;
+}
+
+.contents .business .list li {
+  position: absolute;
+}
+
+.contents .business .list li:nth-child(1) {
+  left: -50px;
+  top: 500px;
+}
+.contents .business .list li:nth-child(2) {
+  right: 193px;
+  top: 150px;
+}
+.contents .business .list li:nth-child(3) {
+  right: -50px;
+  bottom: 0;
+}
+
+.contents .business .list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.contents .business .list li a .img {
+  overflow: hidden;
+}
+
+.contents .business .list li a img {
+  width: 100%;
+  vertical-align: bottom;
+  transition: all 1s;
+}
+
+.contents .business .list li a .txt {
+  position: absolute;
+  background: #fff;
+  width: 300px;
+  height: 450px;
+  padding: 50px 0 0 40px;
+  border: 1px solid #f8b922;
+  line-height: 1.2;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+/* 크기, 위치 다르게 변경 */
+.contents .business .list li:nth-child(1) a .txt {
+  width: 455px;
+  height: 330px;
+  right: -200px;
+  top: 50px;
+}
+.contents .business .list li:nth-child(2) a .txt {
+  left: -100px;
+  top: 40px;
+}
+.contents .business .list li:nth-child(3) a .txt {
+  left: -100px;
+  top: -40px;
+}
+
+.contents .business .list li a .txt h3 {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.contents .business .list li a .txt h3 span {
+  color: #f8b922;
+}
+
+.contents .business .list li a .txt p {
+  font-size: 16px;
+  color: #f8b922;
+}
+
+.contents .business .list li a .icon {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #f8b922;
+  bottom: 40px;
+  left: 40px;
+  transition: all 0.3s;
+}
+
+.contents .business .list li a .icon::after {
+  content: '';
+  width: 2px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #f8b922;
+}
+
+.contents .business .list li a .icon::before {
+  content: '';
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #f8b922;
+}
+
+/* 호버효과 */
+.contents .business .list li a:hover .img img {
+  transform: scale(1.1);
+}
+
+.contents .business .list li a:hover .txt {
+  background: #f8b922;
+}
+
+.contents .business .list li a:hover h3,
+.contents .business .list li a:hover h3 span,
+.contents .business .list li a:hover p {
+  color: #fff;
+}
+
+.contents .business .list li a:hover .icon {
+  border-color: #fff;
+}
+
+.contents .business .list li a:hover .icon::after,
+.contents .business .list li a:hover .icon::before {
+  background: #fff;
+}
+
+/* 비즈니스 이미지 애니메이션 */
+.contents .business .list li.motion a .img img {
+  animation-name: list;
+  animation-duration: 1s;
+}
+
+.contents .business .list li.motion:nth-child(2) a .img img {
+  animation-name: list2;
+  animation-duration: 1s;
+}
+
+@keyframes list {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes list2 {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
 /* 테블릿(1024px ~ 1400px */
 @media screen and (max-width: 1400px) {
+  .innerHeader .logo {
+    width: 170px;
+    transition: all 0.3s;
+  }
   .gnb {
     width: 700px;
     left: 60%;
@@ -1036,6 +1229,78 @@ header.on .gnb ul.inner.on {
   }
   .visual .slide li .txt {
     font-size: 100px;
+  }
+  .contents .more {
+    display: none;
+  }
+  .contents .video {
+    padding: 60px 0;
+  }
+  .contents .inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents .video .inner .title {
+    margin-top: 0;
+  }
+  .contents .business {
+    position: static;
+  }
+
+  .contents .business .inner {
+    position: static;
+  }
+
+  .contents .business .list {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: static;
+  }
+  .contents .business .list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contents .business .list li {
+    position: static;
+    margin: 1rem;
+  }
+
+  .contents .video .inner .videoBox {
+    margin-top: 30px;
+  }
+
+  .contents .business .list li:nth-child(2) {
+    margin-top: 550px;
+    @media screen and (max-width: 1134px) {
+      margin-top: 70px;
+    }
+  }
+  .contents .business .list li:nth-child(3) {
+    margin-right: 500px;
+    @media screen and (max-width: 1134px) {
+      margin-top: 70px;
+      margin-right: 0;
+    }
+  }
+  .contents .business .list li:nth-child(1) a .txt {
+    width: 330px;
+    right: -115px;
+    top: 50px;
+  }
+  .contents .business .list li:nth-child(2) a .txt {
+    left: -250px;
+    top: 40px;
+  }
+  .contents .business .list li:nth-child(3) a .txt {
+    left: 440px;
+    top: -25px;
   }
 }
 
@@ -1069,5 +1334,24 @@ header.on .gnb ul.inner.on {
   }
   .contents .slideBox {
     width: 1140px;
+  }
+
+  .contents .business .list {
+    width: 90%;
+  }
+  .contents .business .list li:nth-child(1) a .txt {
+    width: 300px;
+    right: -20px;
+    top: 110px;
+  }
+  .contents .business .list li:nth-child(2) a .txt {
+    height: 330px;
+    left: -120px;
+    top: 260px;
+  }
+  .contents .business .list li:nth-child(3) a .txt {
+    height: 330px;
+    left: 300px;
+    top: 100px;
   }
 }
