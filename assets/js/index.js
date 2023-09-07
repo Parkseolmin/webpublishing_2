@@ -98,3 +98,11 @@ $(function () {
     $('html, body').animate({ scrollTop: scrollBtn }, 400); //그 위치로 부드럽게 스크롤이동
   });
 });
+
+// 비디오 부분
+$(function () {
+  $('.videoBox .mask').on('click', function () {
+    $(this).css({ display: 'none' });
+    $('.videoBox iframe').css({ display: 'block' });
+  });
+});
